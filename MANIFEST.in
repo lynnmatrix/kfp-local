@@ -1,0 +1,4 @@
+global-exclude *_test.py
+global-exclude test_*.py
+
+include requirements.txt

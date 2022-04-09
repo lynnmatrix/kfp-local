@@ -1,0 +1,10 @@
+# Linting and formatting
+flake8
+flake8-black
+mypy
+mypy-protobuf
+pydantic
+black
+
+# Pushing to PyPi
+twine
