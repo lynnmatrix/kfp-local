@@ -1,7 +1,7 @@
 import os
 from typing import Dict, List
 
-from setuptools import find_namespace_packages, setup
+from setuptools import find_packages, setup
 
 ROOT_PATH = os.path.dirname(__file__)
 PKG_NAME = "kfp-local"
@@ -43,7 +43,7 @@ setup(
     version=_load_version(),
     install_requires=_load_requires(),
     python_requires=">=3.6.1,<4",
-    packages=find_namespace_packages(include=["kfp.*"]),
+    packages=find_packages(),
     include_package_data=True,
     description="kfp local client runs pipelines on local host or in docker container",
     long_description=_load_description(),
