@@ -1,10 +1,10 @@
 .PHONY: requirements install-dev build test lint fmt version clean
 
 requirements:
-ifeq (,$(wildcard ./requirements-dev.txt))	
+ifeq (,$(wildcard ./requirements-dev.txt))
 	pip-compile --verbose requirements-dev.in -o requirements-dev.txt
 endif
-ifeq (,$(wildcard ./requirements.txt))	
+ifeq (,$(wildcard ./requirements.txt))
 	pip-compile --verbose
 endif
 
@@ -18,6 +18,9 @@ build: requirements
 clean:
 	rm -rf ./dist
 	rm -rf ./build
+
+pushtest: clean build
+	twine upload --repository testpypi  dist/*
 
 push: clean build
 	twine upload --repository pypi  dist/*
