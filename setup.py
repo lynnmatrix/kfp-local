@@ -42,7 +42,7 @@ setup(
     name=PKG_NAME,
     version=_load_version(),
     install_requires=_load_requires(),
-    python_requires=">=3.6.1,<4",
+    python_requires=">=3.7",
     packages=find_packages(),
     include_package_data=True,
     description="kfp local client runs pipelines on local host or in docker container",
