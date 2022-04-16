@@ -28,7 +28,7 @@ def flip_coin() -> str:
 
 
 @dsl.component
-def component_with_inputpath(src: dsl.InputPath(str)) -> str:
+def component_with_inputpath(src: dsl.InputPath()) -> str:
     with open(src, "r") as f:
         return f.read()
 
