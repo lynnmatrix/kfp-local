@@ -120,11 +120,6 @@ class LocalClient:
             pipeline_root: The root directory where the output artifact of component
               will be saved.
         """
-        warnings.warn(
-            "LocalClient is an Alpha[1] feature. It may be deprecated in the future.\n"
-            "[1] https://github.com/kubeflow/pipelines/blob/master/docs/release/feature-stages.md#alpha",  # noqa: E501
-            category=FutureWarning,
-        )
 
         _pipeline_root = pipeline_root or tempfile.tempdir
 

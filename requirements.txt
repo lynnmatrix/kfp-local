@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-absl-py==0.11.0
+absl-py==1.0.0
     # via kfp
 attrs==21.4.0
     # via jsonschema
@@ -29,11 +29,12 @@ docstring-parser==0.13
     # via kfp
 fire==0.4.0
     # via kfp
-google-api-core==2.7.1
+google-api-core==2.7.2
     # via
     #   google-api-python-client
     #   google-cloud-core
     #   google-cloud-storage
+    #   kfp
 google-api-python-client==1.12.11
     # via kfp
 google-auth==1.35.0
@@ -47,7 +48,7 @@ google-auth==1.35.0
     #   kubernetes
 google-auth-httplib2==0.1.0
     # via google-api-python-client
-google-cloud-core==2.2.3
+google-cloud-core==2.3.0
     # via google-cloud-storage
 google-cloud-storage==1.44.0
     # via kfp
@@ -69,7 +70,7 @@ importlib-metadata==4.11.3
     #   jsonschema
 jsonschema==3.2.0
     # via kfp
-kfp==1.8.9
+kfp==1.8.12
     # via -r requirements.in
 kfp-pipeline-spec==0.1.14
     # via kfp
@@ -83,6 +84,7 @@ protobuf==3.20.0
     # via
     #   google-api-core
     #   google-cloud-storage
+    #   googleapis-common-protos
     #   kfp
     #   kfp-pipeline-spec
 pyasn1==0.4.8
@@ -93,7 +95,7 @@ pyasn1-modules==0.2.8
     # via google-auth
 pydantic==1.9.0
     # via kfp
-pyparsing==3.0.7
+pyparsing==3.0.8
     # via httplib2
 pyrsistent==0.18.1
     # via jsonschema

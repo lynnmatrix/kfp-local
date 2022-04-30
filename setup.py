@@ -25,7 +25,7 @@ def _load_description() -> str:
 
 
 def _load_requires(
-    requirements="requirements.txt",
+    requirements="requirements.in",
 ) -> List[str]:
     requirements_path = os.path.join(ROOT_PATH, requirements)
     with open(requirements_path) as f:
