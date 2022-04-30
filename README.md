@@ -1,7 +1,7 @@
 # kfp-local
 Pipelines built with [kfp(kubeflow pipeline)](https://github.com/kubeflow/pipelines) execute in k8s cluster.
 
-During the development of kubeflow pipeline components, we usually upload the pipeline to kfp server and run it in k8s, if anything wrong we fix it locally and upload it again. 
+During the development of kubeflow pipeline components, we usually upload the pipeline to kfp server and run it in k8s, if anything wrong we fix it locally and upload it again.
 
 It should be helpful for the development efficiency if the above process takes place in local host, that's what `kfp-local` cares.
 
@@ -22,7 +22,7 @@ result = local_client.create_run_from_pipeline_func(
         )
 if result.success:
     a_output_filepath = result.get_output_file(task_name="a-task", output="a_output_name")
-    
+
 ```
 
 ## Additional configuration
@@ -31,7 +31,7 @@ The demo code in [Usage](#Usage) executes pipeline in local process with *Execut
 
 There are some options of `ExecutionMode`:
 * mode: Default execution mode, default 'docker'
-  
+
 * images_to_exclude: If the image of op is in images_to_exclude, the op is
     executed in the mode different from default_mode.
 
@@ -42,7 +42,7 @@ There are some options of `ExecutionMode`:
 For more information about how to make use of kfp_local, please refer to unit test.
 
 ## kfp compatibility
-kfp-local is tested with kfp=1.8.9 for now.
+kfp-local is tested with kfp>=1.8.9,<2.0 for now.
 
 Supports:
 * Control flow: Condition, ParallelFor, ExitHandler
