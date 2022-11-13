@@ -9,5 +9,8 @@ mypy-protobuf
 pydantic
 black
 
+# Test dependencies
+pytest
+
 # Pushing to PyPi
 twine
