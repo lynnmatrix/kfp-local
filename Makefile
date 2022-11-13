@@ -38,3 +38,6 @@ lint: fmt
 
 fmt:
 	black ${CODE_DIRS}
+
+test:
+	pytest ${CODE_DIRS}
