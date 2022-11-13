@@ -1,3 +1,6 @@
+# Include main dependencies
+-r requirements.in
+
 # Linting and formatting
 flake8
 flake8-black
