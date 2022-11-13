@@ -2,10 +2,10 @@
 
 requirements:
 ifeq (,$(wildcard ./requirements-dev.txt))
-	pip-compile --verbose requirements-dev.in -o requirements-dev.txt
+	pip-compile --verbose requirements-dev.in -o requirements-dev.txt --resolver backtracking
 endif
 ifeq (,$(wildcard ./requirements.txt))
-	pip-compile --verbose
+	pip-compile --verbose --resolver backtracking
 endif
 
 install-dev: requirements
