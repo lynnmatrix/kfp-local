@@ -1,12 +1,12 @@
 .PHONY: requirements install-dev build test lint fmt version clean
 
-requirements:
-ifeq (,$(wildcard ./requirements-dev.txt))
+requirements: requirements-dev.txt requirements.txt
+
+requirements-dev.txt: requirements-dev.in requirements.in
 	pip-compile --verbose requirements-dev.in -o requirements-dev.txt --resolver backtracking
-endif
-ifeq (,$(wildcard ./requirements.txt))
+
+requirements.txt: requirements.in
 	pip-compile --verbose --resolver backtracking
-endif
 
 install-dev: requirements
 	pip install -r requirements-dev.txt
