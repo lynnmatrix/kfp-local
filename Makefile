@@ -1,5 +1,7 @@
 .PHONY: requirements install-dev build test lint fmt version clean
 
+CODE_DIRS="kfp_local"
+
 requirements: requirements-dev.txt requirements.txt
 
 requirements-dev.txt: requirements-dev.in requirements.in
@@ -26,8 +28,8 @@ push: clean build
 	twine upload --repository pypi  dist/*
 
 lint: fmt
-	flake8 .
-	mypy .
+	flake8 ${CODE_DIRS}
+	mypy ${CODE_DIRS}
 	# Check if something has changed after generation
 	git \
 		--no-pager diff \
@@ -35,4 +37,4 @@ lint: fmt
 		.
 
 fmt:
-	black .
+	black ${CODE_DIRS}
